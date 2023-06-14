@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Job Portal</title>
+	<style type="text/css">
+		body {
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+		}
+		form {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			margin: 20px auto;
+			padding: 20px;
+			width: 500px;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="text"], input[type="email"], select, textarea {
+			border: 1px solid #ccc;
+			padding: 5px;
+			width: 100%;
+		}
+		input[type="submit"] {
+			background-color: #333;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			padding: 10px 20px;
+		}
+		input[type="submit"]:hover {
+			background-color: #555;
+		}
+        .error {
+            color:red;
+        }
+        .success {
+            color:green;
+        }
+	</style>
+    <script type="text/javascript">
+        function validateForm() {
+            var name = document.forms["jobForm"]["name"].value.trim();
+            var email = document.forms["jobForm"]["email"].value.trim();
+            var phone = document.forms["jobForm"]["phone"].value.trim();
+            var resume = document.forms["jobForm"]["resume"].value.trim();
+            var coverLetter = document.forms["jobForm"]["cover-letter"].value.trim();
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (phone == "") {
+                alert("Phone must be filled out");
+                return false;
+            }
+
+            if (resume == "") {
+                alert("Resume must be uploaded");
+                return false;
+            }
+
+            if (coverLetter == "") {
+                alert("Cover letter must be filled out");
+                return false;
+            }
+
+            alert("Application submitted successfully!");
+            return true;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Job Portal</h1>
+
+    <form name="jobForm" onsubmit="return validateForm()" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="resume">Resume:</label>
+        <input type="file" id="resume" name="resume">
+
+        <label for="cover-letter">Cover Letter:</label>
+        <textarea id="cover-letter" name="cover-letter"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
