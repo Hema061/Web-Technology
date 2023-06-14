@@ -1,0 +1,825 @@
+#1.Create a webpage using html tags.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Webpage</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my webpage!</h1>
+    </header>
+    <p>This is some text on my webpage.</p>
+    <footer>
+      <p>Copyright © 2023 My Webpage</p>
+    </footer>
+  </body>
+</html>
+
+#2. Create a javascript program to get numbers from the user and print odd numbers and even numbers.
+
+let numbers = prompt("Enter some numbers separated by commas:");
+let arr = numbers.split(",");
+
+let evenNumbers = [];
+let oddNumbers = [];
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] % 2 === 0) {
+    evenNumbers.push(arr[i]);
+  } else {
+    oddNumbers.push(arr[i]);
+  }
+}
+
+console.log("Even numbers: " + evenNumbers.join(", "));
+console.log("Odd numbers: " + oddNumbers.join(", "));
+
+
+
+#3.Create a html page change the position of the element relative to the parent element and relative to itself using relative poistioning with css file.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Relative Positioning Example</title>
+  <style>
+    .parent {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: #eee;
+    }
+
+    .child {
+      position: relative;
+      left: 50px;
+      top: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: #f00;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</body>
+</html>
+
+
+#5.Write a html program using class selector css
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .example {
+    color: blue;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="example">This is a heading</h1>
+<p class="example">This is a paragraph.</p>
+
+</body>
+</html>
+
+#6. Create a html webpage and change the position of the element float to get two elements to float over each other using float positiong with css.
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .left {
+    float: left;
+    width: 50%;
+    background-color: lightblue;
+  }
+  .right {
+    float: right;
+    width: 50%;
+    background-color: lightgreen;
+    position: relative;
+    top: -60px;
+  }
+</style>
+</head>
+<body>
+
+<div class="left">
+  <h2>Left</h2>
+  <p>Some text..</p>
+</div>
+
+<div class="right">
+  <h2>Right</h2>
+  <p>Some text..</p>
+</div>
+
+</body>
+</html>
+
+
+
+7. i) Write a javascript page to find the exponential value
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Exponential Value</h2>
+
+<p>Click the button to find the exponential value of 5:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = 5;
+  document.getElementById("demo").innerHTML = x.toExponential();
+}
+</script>
+
+</body>
+</html>
+
+ii) Write a javascript page to find the limit the number of digits after the decimal value.
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Limit Decimal Value</h2>
+
+<p>Click the button to limit the decimal value of 5.6789:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = 5.6789;
+  document.getElementById("demo").innerHTML = x.toFixed(2);
+}
+</script>
+
+</body>
+</html>
+
+iii) Write a javascript page to convert a number to string
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Convert Number to String</h2>
+
+<p>Click the button to convert the number 123 to a string:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = 123;
+  document.getElementById("demo").innerHTML = x.toString();
+}
+</script>
+
+</body>
+</html>
+
+
+iv) Create a javascript to find return negative infinity using number object
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Return Negative Infinity</h2>
+
+<p>Click the button to return negative infinity:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = Number.NEGATIVE_INFINITY;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
+
+
+8.Create a program for email validation using javascript
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Email Validation</h2>
+
+<p>Enter an email address and click the button to validate it:</p>
+
+<input type="text" id="email" name="email"><br><br>
+
+<button onclick="validateEmail()">Validate Email</button>
+
+<p id="result"></p>
+
+<script>
+function validateEmail() {
+  var email = document.getElementById("email").value;
+  var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+  if (email.match(pattern)) {
+    document.getElementById("result").innerHTML = "Valid email address!";
+  } else {
+    document.getElementById("result").innerHTML = "Invalid email address!";
+  }
+}
+</script>
+
+</body>
+</html>
+
+9.Create html page add GIF image and alter the heights, width, transpirancy, transition.
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+img:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Page with GIF Image</h2>
+
+<p>Here's a GIF image:</p>
+
+<img src="https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" alt="GIF Image" style="width:500px;height:500px;">
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+10.Create a webpage and perform animation effect include radio buttons and mapping according to the picticure.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animation and Image Mapping</title>
+  <style>
+    #container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+      overflow: hidden;
+    }
+    #box {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      transition: all 0.5s;
+    }
+  </style>
+  <script>
+    function moveBox() {
+      var box = document.getElementById("box");
+      box.style.transform = "translate(300px, 300px)";
+    }
+  </script>
+</head>
+<body>
+  <h1>Animation and Image Mapping</h1>
+  <div id="container">
+    <div id="box"></div>
+  </div>
+  <br>
+  <input type="radio" name="animation" onclick="moveBox()">Move Box
+  <br><br>
+  <img src="your-image.jpg" alt="Your Image" usemap="#image-map">
+  <map name="image-map">
+    <area shape="rect" coords="0,0,100,100" href="https://www.example.com/page1.html" alt="Page 1">
+    <area shape="rect" coords="100,0,200,100" href="https://www.example.com/page2.html" alt="Page 2">
+    <area shape="rect" coords="200,0,300,100" href="https://www.example.com/page3.html" alt="Page 3">
+    <area shape="rect" coords="300,0,400,100" href="https://www.example.com/page4.html" alt="Page 4">
+  </map>
+</body>
+</html>
+
+11.Create a webpage using CSS for internal style sheet
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+12.use html table property to display the marks of the students
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Marks</h2>
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Mathematics</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>Science</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>Mike</td>
+            <td>English</td>
+            <td>78</td>
+        </tr>
+        <!-- Add more rows for other students and subjects -->
+    </table>
+</body>
+</html>
+
+
+13.write html program to box model
+
+<!DOCTYPE >
+  <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <title>CSS Box Model Example</title>
+     <style type="text/css">
+.example1 {
+  width:220px;
+  background-color: yellow;
+  padding:0px;
+  border:0px;
+  margin:0px; }
+
+.example2 {
+  width:220px;
+  background-color: yellow;
+  padding:10px;
+  border:5px solid black;
+  margin:40px; }
+
+.example3 {
+  width:220px;
+  padding:0px 4px 40px 100px;
+  margin: -28px 0 -10px 100px;
+  background: #FF0;
+  border-top: 1px solid #000;
+  border-right: 4px dashed #900;
+  border-bottom: 8px double #60F;
+  border-left: 16px inset #6F3; }
+ </style>
+</head>
+
+<body>
+<h1>Box Model Example</h1>
+<hr style="width: 100%; height: 1px;">
+<p class="example1">My Content Example 1</p>
+<hr style="width: 100%; height: 1px; color: blue;">
+<p class="example2">My Content Example 2</p>
+<hr style="width: 100%; height: 1px; color:red;">
+ <p class="example3">My Content Example 3</p>
+<hr style="width: 100%; height: 1px; color:green;">
+<p>&nbsp;</p>
+<p>Click  for <a href="../../css/css-box-model.htm">Details of Box Model Example</a></p>
+</body>
+</html>
+
+14.Create a program for job portal using html and css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Job Portal</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Post a Job</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section id="search-jobs">
+      <h2>Search Jobs</h2>
+      <form>
+        <input type="text" placeholder="Keywords">
+        <input type="text" placeholder="Location">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+    
+    <section id="job-listings">
+      <h2>Latest Job Listings</h2>
+      <ul>
+        <li>
+          <h3>Job Title 1</h3>
+          <p>Company Name 1</p>
+          <p>Location 1</p>
+          <a href="#">Apply Now</a>
+        </li>
+        <li>
+          <h3>Job Title 2</h3>
+          <p>Company Name 2</p>
+          <p>Location 2</p>
+          <a href="#">Apply Now</a>
+        </li>
+        <li>
+          <h3>Job Title 3</h3>
+          <p>Company Name 3</p>
+          <p>Location 3</p>
+          <a href="#">Apply Now</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Job Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+15.write html program to add emojis
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Sized Emojis</h1>
+
+<p style="font-size:48px">
+&#128512; &#128516; &#128525; &#128151;
+</p>
+
+</body>
+</html>
+
+16.write html program to display the items in ordered list, unordered list and definition
+DOCTYPE html>
+<html>
+<head>
+	<title>Lists in HTML</title>
+</head>
+<body>
+	<h1>Lists in HTML</h1>
+	<h2>Ordered List</h2>
+	<ol>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ol>
+
+	<h2>Unordered List</h2>
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+
+	<h2>Definition List</h2>
+	<dl>
+		<dt>HTML</dt>
+		<dd>HyperText Markup Language</dd>
+		<dt>CSS</dt>
+		<dd>Cascading Style Sheets</dd>
+		<dt>JS</dt>
+		<dd>JavaScript</dd>
+	</dl>
+</body>
+</html>
+
+17.write the html program display special type text
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COLOURS LIVES LIFE</title>
+
+</head>
+<body background= "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFhUXGBgaGBgXFxcXFxcXGBoZGhgYFxcYHyggGBolGxgYITEhJSkrLi4uFx80OTQtOCgtLisBCgoKDg0OGxAQGy0lHyUtLS0tLS0tLS0tLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMIBAwMBIgACEQEDEQH/xAAaAAADAAMBAAAAAAAAAAAAAAADBAUAAgYB/8QAOhAAAQMCAwQJAgQGAgMAAAAAAQACEQMhBDFBElFhcQUigZGhscHR8BMyQlLh8QYUIzNicoKykqLC/8QAGgEAAwEBAQEAAAAAAAAAAAAAAgMEAQUABv/EADMRAAEDAgMGBQMEAgMAAAAAAAEAAhEDIRIxUQQiQWFx8BOBkaGxMsHRM0Lh8RQjBWKC/9oADAMBAAIRAxEAPwDs6BunGOv2KdTMfOJRaTjJ5IKzC4koqTogIj3Ssa6980UMskqpusaMgrA4XPBOOdaUlXcSb5TZFoHqkcEHPvTolpCxzi3e0gozaLXAF8mMo36A7tVrSxoDX3yyG">
+  <p><em>Colors makes life beautiful.</em></p>
+  <p><mark>Here,we have 10 billion colors in the world. <mark></p>
+  <p><ins>There are warm colors denotes excitement.</ins> </p>
+  <p><sub>There are cool colors denotes paintainece </sub> </p>
+  <p><sup>We can't live our life without colors </sup> </p>
+}
+</body>
+</style>
+</html>
+
+19.create a program to use frame set in html
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Example of Frameset in HTML</title>
+   </head>
+   <frameset rows="25%, 75%">
+      <frame src="header.html" name="header">
+      <frameset cols="25%, 75%">
+         <frame src="sidebar.html" name="sidebar">
+         <frame src="content.html" name="content">
+      </frameset>
+   </frameset>
+   <body>
+      <p>This is the body of the HTML document.</p>
+   </body>
+</html>
+
+20.create a web pages to add audio and video controls
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio and Video Controls</title>
+</head>
+<body>
+  <h1>Audio and Video Controls</h1>
+  
+  <h2>Audio Example</h2>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <h2>Video Example</h2>
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+</body>
+</html>
+
+21.Write a javascript program to display the data and time
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date and Time Display</title>
+  <script>
+    function displayDateTime() {
+      var dateTime = new Date();
+      var date = dateTime.toLocaleDateString();
+      var time = dateTime.toLocaleTimeString();
+      var dateTimeString = date + ' ' + time;
+      document.getElementById('datetime').textContent = dateTimeString;
+    }
+    
+    setInterval(displayDateTime, 1000);
+  </script>
+</head>
+<body>
+  <h1>Date and Time Display</h1>
+  
+  <p id="datetime"></p>
+</body>
+</html>
+22.write a servelet program to display the confirmed dishes
+out.println("<html>");
+    out.println("<head><title>Confirmed Dishes</title></head>");
+    out.println("<body>");
+    out.println("<h1>Confirmed Dishes</h1>");
+    out.println("<ul>");
+    for (String dish : confirmedDishes) {
+      out.println("<li>" + dish + "</li>");
+    }
+    out.println("</ul>");
+    out.println("</body>");
+    out.println("</html>");
+  }
+}
+
+23.create  a web pages and add animation effect into it
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Animated Web Page</title>
+	<style>
+		/* Add some styles to the page elements */
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			color: #333333;
+			text-align: center;
+			margin-top: 50px;
+			font-size: 36px;
+			animation: bounce 2s infinite;
+		}
+
+		p {
+			color: #666666;
+			font-size: 18px;
+			text-align: center;
+			margin-top: 30px;
+			animation: fadein 2s;
+		}
+
+		/* Define the animation effects */
+		@keyframes bounce {
+			0% { transform: translateY(0); }
+			50% { transform: translateY(-20px); }
+			100% { transform: translateY(0); }
+		}
+
+		@keyframes fadein {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to my animated web page!</h1>
+	<p>This page has some cool animation effects.</p>
+</body>
+</html>
+
+24.create a program for add background image property using the url and style tag using internal types of css
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background Image Example</title>
+	<style>
+		body {
+			background-image: url("https://example.com/background-image.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+	<p>This is an example of how to add a background image using internal CSS.</p>
+</body>
+</html>
+
+25.create a program to working with string object in html
+Joining to string
+Returning the postion 
+Returing primitive value of string
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Working with String Object</title>
+</head>
+<body>
+	<script>
+		// Joining two strings
+		var str1 = "Hello";
+		var str2 = "World";
+		var joinedStr = str1.concat(" ", str2);
+		document.write("Joined String: " + joinedStr + "<br>");
+
+		// Returning the position of a substring
+		var str3 = "Hello World";
+		var pos = str3.indexOf("World");
+		document.write("Position of substring 'World': " + pos + "<br>");
+
+		// Returning primitive value of a string
+		var str4 = new String("Hello");
+		var primitiveStr = str4.valueOf();
+		document.write("Primitive value of string 'str4': " + primitiveStr + "<br>");
+	</script>
+</body>
+</html>
+26.write js program to find the no.of.client visted  the website
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visitor Counter</title>
+</head>
+<body>
+	<div id="visitor-count"></div>
+
+	<script type="text/javascript">
+		if (typeof(Storage) !== "undefined") {
+			if (localStorage.visitorCount) {
+				localStorage.visitorCount = Number(localStorage.visitorCount)+1;
+			} else {
+				localStorage.visitorCount = 1;
+			}
+			document.getElementById("visitor-count").innerHTML = "You are visitor number " + localStorage.visitorCount + ".";
+		} else {
+			document.getElementById("visitor-count").innerHTML = "Sorry, your browser does not support web storage...";
+		}
+	</script>
+</body>
+</html>
+27.create a program  lower case to upper case in string html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert lowercase string to uppercase</h2>
+
+<p>Enter a lowercase string:</p>
+
+<input type="text" id="inputString">
+
+<button onclick="convertString()">Convert</button>
+
+<p>Uppercase string:</p>
+
+<p id="outputString"></p>
+
+<script>
+function convertString() {
+  let input = document.getElementById("inputString").value;
+  let output = input.toUpperCase();
+  document.getElementById("outputString").innerHTML = output;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
